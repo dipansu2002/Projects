@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <style>
+        body{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: rgb(236, 229, 229);
+        }
+        h1{
+        text-align: center;
+        }
+        #taskinput{
+            text-align: center;
+            padding: 10px 80px;
+            border-radius: 8px;
+            width: 80%;
+            border: none;
+            border-bottom: 2px solid #ccc;
+            font-size: 16px;
+            outline: none;
+        }
+        button{
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover{
+            background-color: #2980b9;
+        }
+        li{
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        label{
+            flex-grow: 1;
+            margin-left: 10px;
+        }
+        input[type="checkbox"]{
+            margin-left: 10px;
+        }
+        input[type="checkbox"]:checked+label{
+            text-decoration: line-through;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <h1>YOUR TODO LIST</h1>
+    <input type="text" id="taskinput" placeholder="enter your todos"><br>
+    <button onclick="addtask()">Add Task</button> 
+    <ul id="tasklist">
+
+    </ul> 
+    <script src="script.js"></script>  
+</body>
+</html>
